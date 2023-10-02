@@ -1,0 +1,208 @@
+:root {
+  --clr-primary-400: #04ddb2;
+  --clr-accent-400: #333;
+  --clr-accent-100: #767676;
+
+  --ff-family-primary: "Lab Grotesque", sans-serif;
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-heading);
+
+  --fw-bold: 900;
+  --fw-regular: 400;
+  --fw-semi-bold: 700;
+
+  --fs-300: 1rem; /* 16px */
+  --fs-400: 1.125rem; /* 18px */
+  --fs-450: 1.25rem; /* 20px */
+  --fs-500: 1.5rem; /* 24px */
+  --fs-600: 1.625rem; /* 26px */
+  --fs-700: 2.375rem; /* 38px */
+  --fs-800: 3.5rem; /* 56px */
+  --fs-900: 4rem; /*64px*/
+
+  --fs-footer: var(--fs-300);
+  --fs-nav: var(--fs-400);
+  --fs-body: var(--fs-400);
+  --fs-button: var(--fs-400);
+  --fs-heading: var(--fs-700);
+}
+
+/*between 650px and 1200px tab */
+@media (min-width: 40.625em) and (max-width: 75em) {
+  :root {
+    --fs-footer: var(--fs-300);
+    --fs-nav: var(--fs-300);
+    --fs-body: var(--fs-500);
+    --fs-button: var(--fs-450);
+    --fs-heading: var(--fs-800);
+  }
+}
+
+/*1200px above*/
+@media (min-width: 75em) {
+  :root {
+    --fs-footer: var(--fs-300);
+    --fs-nav: var(--fs-400);
+    --fs-body: var(--fs-600);
+    --fs-button: var(--fs-450);
+    --fs-heading: var(--fs-900);
+  }
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 
+utility classes */
+
+.text-primary-400 {
+  color: var(--clr-primary-400);
+}
+
+.text-accent-400 {
+  color: var(--clr-accent-400);
+}
+
+.text-accent-100 {
+  color: var(--clr-accent-100);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.fw-semi-bold {
+  font-weight: var(--fw-semi-bold);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+.fs-heading {
+  font-size: var(--fs-heading);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.video-wrapper {
+  margin: 0 auto;
+  max-width: 1000px;
+  margin-bottom: 20px;
+}
+
+.youtube-player {
+  position: relative;
+  padding-bottom: 56.23%;
+  /* Use 75% for 4:3 videos */
+  height: 0;
+  max-width: 100%;
+  /* background: #000; */
+  margin: 5px;
+}
+
+.youtube-player iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: transparent;
+}
+
+.youtube-player img {
+  bottom: 0;
+  display: block;
+  left: 0;
+  margin: auto;
+  max-width: 100%;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  height: auto;
+  cursor: pointer;
+  -webkit-transition: 0.4s all;
+  -moz-transition: 0.4s all;
+  transition: 0.4s all;
+}
+
+.youtube-player img:hover {
+  -webkit-filter: brightness(75%);
+}
+
+.youtube-player .play {
+  height: 72px;
+  width: 72px;
+  left: 50%;
+  top: 50%;
+  margin-left: -36px;
+  margin-top: -36px;
+  position: absolute;
+  background: url("//i.imgur.com/TxzC70f.png") no-repeat;
+  cursor: pointer;
+}
