@@ -25,6 +25,10 @@
   --fs-body: var(--fs-400);
   --fs-button: var(--fs-400);
   --fs-heading: var(--fs-700);
+
+  --size-700: 3rem;
+  --size-800: 4rem;
+  --size-900: 5.5rem;
 }
 
 /*between 650px and 1200px tab */
@@ -149,6 +153,42 @@ utility classes */
   text-align: center;
 }
 
+.padding-block-700 {
+  padding-block: var(--size-700);
+}
+
+.padding-block-800 {
+  padding-block: var(--size-800);
+}
+
+.padding-block-900 {
+  padding-block: var(--size-900);
+}
+
+.padding-bottom-800 {
+  padding-bottom: var(--size-800);
+}
+
+.padding-bottom-900 {
+  padding-bottom: var(--size-900);
+}
+
+.container {
+  --max-width: 1110px;
+  --container-padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--container-padding) * 2));
+  margin-inline: auto;
+  /* margin: 0 auto; */
+}
+
+/* general styling */
+body {
+  font-size: var(--fs-body);
+  font-family: var(--ff-family-primary);
+  color: var(--clr-accent-400);
+}
+
 .video-wrapper {
   margin: 0 auto;
   max-width: 1000px;
@@ -206,3 +246,41 @@ utility classes */
   background: url("//i.imgur.com/TxzC70f.png") no-repeat;
   cursor: pointer;
 }
+
+.button {
+  /* display: inline-flex; */
+  cursor: pointer;
+  text-decoration: none;
+  border: 0;
+  border-radius: 100vmax;
+  padding: 1em 2.25em;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-button);
+  line-height: 1;
+  color: #fff;
+
+  background-color: var(--clr-primary-400);
+  box-shadow: 0 1.125em 1em -1em var(--clr-accent-500);
+}
+
+.button:hover,
+.button:focus-visible {
+  padding: 1.2em 2.45em;
+}
+
+.primary-footer-wrapper {
+  /* display: flex;
+  justify-content: space-between;
+  flex: 1 1; */
+  display: grid;
+}
+
+/* footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* .col {
+  display: grid;
+} */
