@@ -337,13 +337,18 @@ body {
   color: var(--clr-accent-100);
 }
 
+.nav-list a:hover,
+.nav-list a:focus {
+  color: var(--clr-accent-400);
+}
+
 @media (max-width: 40.625em) {
   .primary-navigation {
     display: none;
 
     padding: var(--size-600);
 
-    position: fixed;
+    position: absolute;
     inset: 7rem var(--size-400) auto;
     background: #04ddb2;
     z-index: 1;
