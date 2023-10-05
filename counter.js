@@ -1,9 +1,9 @@
-export function setupCounter(element) {
-  let counter = 0
-  const setCounter = (count) => {
-    counter = count
-    element.innerHTML = `count is ${counter}`
-  }
-  element.addEventListener('click', () => setCounter(counter + 1))
-  setCounter(0)
-}
+const navToggle = document.querySelector(".mobile-nav-toggle");
+const primaryNav = document.querySelector(".primary-navigation");
+
+navToggle.addEventListener("click", () => {
+  primaryNav.hasAttribute("data-visible")
+    ? navToggle.setAttribute("aria-expanded", false)
+    : navToggle.setAttribute("aria-expanded", true);
+  primaryNav.toggleAttribute("data-visible");
+});
